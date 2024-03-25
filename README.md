@@ -25,7 +25,9 @@ Node.js
 Express.js
 HTML/CSS
 JavaScript
-Credits
+
+## Credits
+
 This project was created by Matheus Almeida.
 
 ## License
