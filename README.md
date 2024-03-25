@@ -1,10 +1,10 @@
-#Note Taker Application
+# Note Taker Application
 
-##Description
+## Description
 
 The Note Taker application allows users to create, save, and delete notes in an organized manner. Users can easily manage their notes with a simple and intuitive interface.
 
-##Features
+## Features
 
 Landing page with a link to the notes page
 Notes page displaying existing notes and fields to create new notes
