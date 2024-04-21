@@ -15,7 +15,6 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
@@ -27,7 +26,6 @@ const hide = (elem) => {
 };
 
 // activeNote is used to keep track of the note in the textarea
-
 let activeNote = {};
 
 const getNotes = () =>
@@ -48,8 +46,8 @@ const getNotes = () =>
   });
   
 
-const deleteNote = (id) =>
-  fetch(`/api/notes/${id}`, {
+const deleteNote = (note_id) =>
+  fetch(`/api/notes/${note_id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
@@ -92,9 +90,9 @@ const handleNoteDelete = (e) => {
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).note_id;
 
-  if (activeNote.id === noteId) {
+  if (activeNote.note_id === noteId) {
     activeNote = {};
   }
 
